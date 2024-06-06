@@ -18,7 +18,7 @@ export default function ShowBlog() {
       navigate(`/signin`)
     }
     else{
-    const resp = await fetch("http://localhost:8000/comment/post", {
+    const resp = await fetch("https://blog-x71e.onrender.com/comment/post", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -34,7 +34,7 @@ export default function ShowBlog() {
     fetchComments()}
   };
   const fetchComments = async () => {
-    const resp = await fetch(`http://localhost:8000/comment/${blogId}`);
+    const resp = await fetch(`https://blog-x71e.onrender.com/comment/${blogId}`);
     const data = await resp.json();
     setComm(data)
   };
@@ -46,7 +46,7 @@ export default function ShowBlog() {
 
   const fetchBlog = async () => {
     try {
-      const resp = await fetch(`http://localhost:8000/blogs/${blogId}`);
+      const resp = await fetch(`https://blog-x71e.onrender.com/blogs/${blogId}`);
       if (!resp.ok) {
         throw new Error(`HTTP error! status: ${resp.status}`);
       }

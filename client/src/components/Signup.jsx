@@ -7,7 +7,7 @@ export default function Signup() {
     const navigate = useNavigate()
     const handleUserSignup=async (e,name,email,password)=>{
         e.preventDefault()
-        const resp = await fetch("http://localhost:8000/user/signup",{
+        const resp = await fetch("https://blog-x71e.onrender.com/user/signup",{
             method:"POST",
             headers:{
                 "Content-Type": "application/json"

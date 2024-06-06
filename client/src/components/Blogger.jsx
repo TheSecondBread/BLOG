@@ -14,7 +14,7 @@ export default function Blogger() {
       fetchBlogs()
     },[])
     const fetchBlogs =async ()=>{
-      const resp = await fetch(`http://localhost:8000/blogs/show/${user}`)
+      const resp = await fetch(`https://blog-x71e.onrender.com/blogs/show/${user}`)
       const blogs = await resp.json()
       setBlogs(blogs)
       console.log(blogs)

@@ -8,7 +8,7 @@ export default function Blogs() {
     fetchBlogs()
   },[])
   const fetchBlogs =async ()=>{
-    const resp = await fetch("http://localhost:8000/blogs")
+    const resp = await fetch("https://blog-x71e.onrender.com/blogs")
     const blogs = await resp.json()
     setBlogs(blogs)
   }

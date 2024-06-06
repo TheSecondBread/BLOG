@@ -12,7 +12,7 @@ export default function MyBlog({ blogs }) {
 
   }
   const handleDelete= async (blog)=>{
-    const resp = await fetch(`http://localhost:8000/blogs/${blog._id}`, {
+    const resp = await fetch(`https://blog-x71e.onrender.com/blogs/${blog._id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

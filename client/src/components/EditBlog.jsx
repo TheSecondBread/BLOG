@@ -20,7 +20,7 @@ export default function EditBlog() {
   
   const fetchBlog = async () => {
     
-      const resp = await fetch(`http://localhost:8000/blogs/${blogId}`);
+      const resp = await fetch(`https://blog-x71e.onrender.com/blogs/${blogId}`);
 
       const data = await resp.json();
       setTitle(data.title)
@@ -39,7 +39,7 @@ export default function EditBlog() {
   };
   const handleEditBlog=async(e,title,des,markdown)=>{
     console.log(blogId)
-   const resp = await  fetch(`http://localhost:8000/blogs/${blogId}`,{
+   const resp = await  fetch(`https://blog-x71e.onrender.com/blogs/${blogId}`,{
         method:"PATCH",
         headers:{"CONTENT-TYPE":"application/json"},
         body:JSON.stringify({

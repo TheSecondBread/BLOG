@@ -8,7 +8,7 @@ export default function Myblogs() {
         fetchBlogs()
     },[])
     const fetchBlogs =async ()=>{
-        const resp = await fetch("http://localhost:8000/blogs/myblogs",{
+        const resp = await fetch("https://blog-x71e.onrender.com/blogs/myblogs",{
             method:"POST",
             headers:{"CONTENT-TYPE":"application/json",
                 "Authorization":`Bearer ${Cookies.get("jwt")}`

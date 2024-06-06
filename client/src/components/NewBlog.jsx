@@ -49,7 +49,7 @@ Welcome to my blog post. Here is some *italic text* and here is some **bold text
   };
   const handleBlogSubmit= async (e,title,des,markdown)=>{
     e.preventDefault()
-    const resp = await fetch("http://localhost:8000/blogs/post",{
+    const resp = await fetch("https://blog-x71e.onrender.com/blogs/post",{
         method:"POST",
         headers: {
           "Content-Type": "application/json",

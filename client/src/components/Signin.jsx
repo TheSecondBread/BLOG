@@ -8,7 +8,7 @@ export default function Signin() {
 
     const handleUserSignin=async (e,email,password)=>{
       e.preventDefault()
-        const resp = await fetch("http://localhost:8000/user/signin",{
+        const resp = await fetch("https://blog-x71e.onrender.com/user/signin",{
             headers: {
                 "Content-Type": "application/json",
               },
